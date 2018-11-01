@@ -11,3 +11,12 @@ for phrase in passPhrases:
         sum+=1
 
 print(sum)
+
+# Part 2
+sum = 0
+for phrase in passPhrases:
+    chars = [''.join(sorted(words)) for words in phrase.split()]
+    if len(set(chars)) == len(chars):
+        sum += 1
+
+print(sum)
